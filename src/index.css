@@ -218,6 +218,54 @@ h3 { font-size: 1rem; font-weight: 600; }
 }
 .search-input::placeholder { color: var(--text-faint); }
 
+/* ─── Manual download ───────────────────────────────────────────────────── */
+.manual-download {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin: 1rem;
+  padding: 1rem;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-inline-start: 4px solid var(--accent-blue);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.manual-download-copy h2 {
+  font-size: 1rem;
+}
+
+.manual-download-copy p {
+  margin-top: 0.2rem;
+  color: var(--text-muted);
+  font-size: 0.85rem;
+}
+
+.manual-download-link {
+  flex-shrink: 0;
+  min-height: var(--tap-min);
+  padding: 0.5rem 0.85rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius);
+  background: var(--accent-blue);
+  color: #fff;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.manual-download-link:hover {
+  filter: brightness(1.1);
+}
+
+.manual-download-link:focus-visible {
+  outline: 2px solid var(--accent-blue);
+  outline-offset: 3px;
+}
+
 /* ─── System grid ────────────────────────────────────────────────────────── */
 .system-grid {
   display: grid;
@@ -720,6 +768,13 @@ h3 { font-size: 1rem; font-weight: 600; }
   .load-list { padding: 0.5rem 1.5rem; }
   .system-notes { margin: 0.5rem 1.5rem; }
   .footer { margin-inline: 1.5rem; }
+}
+
+@media (max-width: 480px) {
+  .manual-download {
+    align-items: stretch;
+    flex-direction: column;
+  }
   .qr-page { padding: 1rem 1.5rem; }
 }
 

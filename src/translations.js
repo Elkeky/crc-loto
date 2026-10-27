@@ -15,6 +15,11 @@ export const translations = {
     'search.placeholder': 'ابحث بالقاطع أو الاسم… (مثال: Q70)',
     'search.noResults': 'لا نتائج لـ',
 
+    // Machine manual
+    'manual.title': 'دليل مخطط الدائرة',
+    'manual.description': 'CRC 53 إلى 58',
+    'manual.download': '⬇ تنزيل الدليل',
+
     // Machine page
     'section.chooseSystem': 'اختر النظام',
     'system.loads.suffix': 'أحمال',
@@ -85,6 +90,10 @@ export const translations = {
 
     'search.placeholder': 'Search by breaker or name… (e.g. Q70)',
     'search.noResults': 'No results for',
+
+    'manual.title': 'Circuit Diagram Manual',
+    'manual.description': 'CRC 53 to 58',
+    'manual.download': '⬇ Download manual',
 
     'section.chooseSystem': 'Choose System',
     'system.loads.suffix': 'loads',

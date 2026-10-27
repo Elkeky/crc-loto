@@ -1,9 +1,12 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import { VitePWA } from 'vite-plugin-pwa'
-
 export default defineConfig({
-  base: process.env.VERCEL ? '/' : '/crc-lockouttagout/',
+  base: process.env.VERCEL
+    ? '/'
+    : process.env.GITHUB_REPOSITORY
+    ? `/${process.env.GITHUB_REPOSITORY.split('/')[1]}/`
+    : '/',
   plugins: [
     react(),
     VitePWA({
@@ -25,7 +28,8 @@ export default defineConfig({
         ]
       },
       workbox: {
-        globPatterns: ['**/*.{js,css,html,svg,png,json}'],
+        globPatterns: ['**/*.{js,css,html,svg,png,json,pdf}'],
+        maximumFileSizeToCacheInBytes: 15 * 1024 * 1024,
         runtimeCaching: [
           {
             urlPattern: /\/data\/machines\.json$/,

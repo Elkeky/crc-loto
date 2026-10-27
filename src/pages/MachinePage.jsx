@@ -53,6 +53,20 @@ export default function MachinePage() {
       <Breadcrumb crumbs={[{ label: machine.name }]} />
       <SearchBox machine={machine} />
 
+      <section className="manual-download" aria-label={t('manual.title')}>
+        <div className="manual-download-copy">
+          <h2>{t('manual.title')}</h2>
+          <p>{t('manual.description')}</p>
+        </div>
+        <a
+          className="manual-download-link"
+          href={`${import.meta.env.BASE_URL}manuals/crc-53-58-circuit-diagram.pdf`}
+          download="CRC 53 To 58 Circuit Diag.pdf"
+        >
+          {t('manual.download')}
+        </a>
+      </section>
+
       <p className="section-title">{t('section.chooseSystem')}</p>
       <div className="system-grid">
         {machine.systems.map(system => {
